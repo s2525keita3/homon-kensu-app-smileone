@@ -32,7 +32,8 @@ streamlit run app.py
 
 ### GitHub に載せる（初回 push）
 
-ローカルは Git 初期化済みです。**[docs/GITHUB_PUSH.md](docs/GITHUB_PUSH.md)** に、空のリポジトリを作って `git push` する手順があります。
+ローカルは Git 初期化済みです。**[docs/GITHUB_PUSH.md](docs/GITHUB_PUSH.md)** を参照。  
+**ほぼ自動:** `scripts/push-to-github.ps1` でリポジトリ作成と push まで一括（初回のみブラウザで GitHub ログインが必要）。
 
 ### インストールなしで共有したい（URL を発行）
 
