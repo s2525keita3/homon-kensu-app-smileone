@@ -12,10 +12,26 @@
    ```powershell
    winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements
    ```
-2. プロジェクトの **`訪問件数仕分けアプリ` フォルダ**で、次を実行:
+2. プロジェクトの **`訪問件数仕分けアプリ` フォルダ**に移動してから実行します。
+
+   **すでに PowerShell を開いている場合**（おすすめ）— 次の **2 行だけ**（`powershell` を二度と書かない）:
+
    ```powershell
+   cd "c:\Users\s2525\OneDrive\ドキュメント\デスクトップ\John_ai\訪問件数仕分けアプリ"
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+   .\scripts\push-to-github.ps1
+   ```
+
+   （`-ExecutionPolicy Bypass` と書く。`-Bypass` だけだとエラーになります。）
+
+   **コマンドプロンプト (cmd) から** 別プロセスで PowerShell を起動するとき:
+
+   ```cmd
+   cd /d "c:\Users\s2525\OneDrive\ドキュメント\デスクトップ\John_ai\訪問件数仕分けアプリ"
    powershell -ExecutionPolicy Bypass -File .\scripts\push-to-github.ps1
    ```
+
+   ※ フォルダパスの **直後に `powershell` と続けない**でください。`\訪問件数仕分けアプリ\powershell` のように見えるとエラーになります。
 3. **初回だけ** `gh auth login` でブラウザが開き、GitHub にログインします（これはあなた本人の許可が必要で、自動では代行できません）。
 4. 既定のリポジトリ名は **`homon-kensu-app`**（**非公開 private**）。変える場合は例:
    ```powershell
