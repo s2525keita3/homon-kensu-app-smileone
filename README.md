@@ -30,10 +30,10 @@ streamlit run app.py
 
 ブラウザでアプリが開きます。左サイドバーから PDF をアップロードし、「担当別訪問件数 PDF として集計する」を ON にして取り込み実行してください。
 
-### GitHub に載せる（初回 push）
+### GitHub に載せる（Cursor から）
 
-ローカルは Git 初期化済みです。**[docs/GITHUB_PUSH.md](docs/GITHUB_PUSH.md)** を参照。  
-**ほぼ自動:** プロジェクトフォルダで `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` のあと `.\scripts\push-to-github.ps1`（初回のみブラウザで GitHub ログイン）。詳細は `docs/GITHUB_PUSH.md`。
+**いちばんわかりやすい手順:** **[docs/CURSOR_GITHUB.md](docs/CURSOR_GITHUB.md)**（空リポジトリを作る → `git remote add` → `git push` のみ）。  
+その他: [docs/GITHUB_PUSH.md](docs/GITHUB_PUSH.md)（`gh` CLI・スクリプト版）。
 
 ### インストールなしで共有したい（URL を発行）
 
