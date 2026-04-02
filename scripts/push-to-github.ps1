@@ -21,7 +21,8 @@ if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
     Write-Error "GitHub CLI (gh) not found. Run: winget install --id GitHub.cli -e"
 }
 
-$null = gh auth status 2>&1
+# gh auth status writes to stderr when not logged in; cmd hides it so -Stop does not abort
+cmd /c "gh auth status >nul 2>nul"
 if ($LASTEXITCODE -ne 0) {
     Write-Host ""
     Write-Host "[Login] First time only: sign in to GitHub (browser will open)." -ForegroundColor Cyan
